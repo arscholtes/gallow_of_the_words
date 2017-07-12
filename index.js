@@ -1,5 +1,5 @@
 const express = require('express');
-const Router = require('./routes/routes');
+const Router = require('./controller/routes');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const mustacheExpress = require('mustache-express');

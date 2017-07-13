@@ -1,5 +1,5 @@
 const express = require('express');
-const Router = require('./controller/routes');
+const Router = require('./routes/routes');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const mustacheExpress = require('mustache-express');
@@ -19,12 +19,14 @@ app.use(session({
   saveUninitialized: false
 }));
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.use(expressValidator());
 
 app.use('/', Router);
 
-app.listen(3000, function(){
+app.listen(3000, function() {
   console.log('Initializing Hangman Protocol');
 });

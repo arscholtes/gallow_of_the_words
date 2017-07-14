@@ -1,6 +1,6 @@
 const express = require('express');
 const fs = require('fs');
-const words = fs.readFileSync('../data/words', 'utf-8').toLowerCase().split('\n');
+const words = fs.readFileSync('./data/words', 'utf-8').toLowerCase().split('\n');
 const router = express.Router();
 
 let randomIndex = Math.floor(Math.random() * words.length);   //grabbing a random word located in the './dict/words' folder

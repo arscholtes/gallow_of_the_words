@@ -27,7 +27,7 @@ router.get('/', function(req, res){
   res.render('menu');
 });
 
-//
+//   
 
 router.get('/game', function(req, res){
   sess = req.session;                         //short-handing req.session.____
